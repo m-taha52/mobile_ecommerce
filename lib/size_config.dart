@@ -14,3 +14,15 @@ class SizeConfig {
     orientation = _mediaQueryData.orientation;
   }
 }
+
+//get the proportionate height as per screen size
+double getProportionateScreenHeight(double inputHeight) {
+  double screenHeight = SizeConfig.screenHeight;
+  return (inputHeight / 832.0)  * screenHeight;
+}
+
+//get the proportionate width as per screen size
+double getProportionateScreenWidth(double inputWidth) {
+  double screenWidth = SizeConfig.screenWidth;
+  return (inputWidth / 832.0)  * screenWidth;
+}
