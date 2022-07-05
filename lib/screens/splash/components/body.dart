@@ -11,7 +11,9 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return 
+    SafeArea(child: 
+    Column(
       children: <Widget>[
         Expanded(
             flex: 3,
@@ -28,6 +30,7 @@ class _BodyState extends State<Body> {
             child: SizedBox(),
             ),
       ],
+     ),
     );
   }
 }
