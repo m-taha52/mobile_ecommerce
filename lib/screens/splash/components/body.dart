@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/constants.dart';
 import 'package:ecommerce_app/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -13,24 +14,29 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return 
     SafeArea(child: 
-    Column(
-      children: <Widget>[
-        Expanded(
-            flex: 3,
-            child: Column(
-              children:  <Widget> [
-                Text('TOKOTO', style: TextStyle(
-                  fontSize: getProportionateScreenWidth(36),
-                ),)
-              ],
-            )
-            ),
-          const Expanded(
-            flex: 2,
-            child: SizedBox(),
-            ),
-      ],
-     ),
+    SizedBox(
+      width: double.infinity,
+      child: Column(
+        children: <Widget>[
+          Expanded(
+              flex: 3,
+              child: Column(
+                children:  <Widget> [
+                  Text('TOKOTO', style: TextStyle(
+                    fontSize: getProportionateScreenWidth(36),
+                    color: kPrimaryColor,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                ],
+              )
+              ),
+            const Expanded(
+              flex: 2,
+              child: SizedBox(),
+              ),
+        ],
+       ),
+    ),
     );
   }
 }
