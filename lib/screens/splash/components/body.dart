@@ -26,7 +26,15 @@ class _BodyState extends State<Body> {
                     fontSize: getProportionateScreenWidth(36),
                     color: kPrimaryColor,
                     fontWeight: FontWeight.bold,
-                  ),)
+                   ),
+                  ),
+                  const Text("Welcome to Tokoto, Let's Shop"),
+                  const Spacer(),
+                  Image.asset(
+                    'assets/images/splash_1.png',
+                    height: getProportionateScreenHeight(265),
+                    width: getProportionateScreenWidth(235),
+                     )
                 ],
               )
               ),
