@@ -22,6 +22,7 @@ class _BodyState extends State<Body> {
               flex: 3,
               child: Column(
                 children:  <Widget> [
+                  const Spacer(flex: 2,),
                   Text('TOKOTO', style: TextStyle(
                     fontSize: getProportionateScreenWidth(36),
                     color: kPrimaryColor,
