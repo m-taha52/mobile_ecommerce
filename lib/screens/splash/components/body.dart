@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:ecommerce_app/constants.dart';
 import 'package:ecommerce_app/size_config.dart';
 import 'package:flutter/material.dart';
@@ -17,14 +19,16 @@ class _BodyState extends State<Body> {
     SizedBox(
       width: double.infinity,
       child: Column(
-        children: const <Widget>[
+        children:  <Widget>[
           Expanded(
               flex: 3,
-              child: SplashContent(
+              
+              child: PageView.builder(
+                itemBuilder: (context, index) => SplashContent(
                 text: "Welcome to Tokoto, Let's Shop",
                 image: 'assets/images/splash_1.png',
-              ),
-              ),
+              )
+              )),
             Expanded(
               flex: 2,
               child: SizedBox(),
