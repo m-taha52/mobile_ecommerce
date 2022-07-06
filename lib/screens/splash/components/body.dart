@@ -17,35 +17,47 @@ class _BodyState extends State<Body> {
     SizedBox(
       width: double.infinity,
       child: Column(
-        children: <Widget>[
+        children: const <Widget>[
           Expanded(
               flex: 3,
-              child: Column(
-                children:  <Widget> [
-                  const Spacer(flex: 2,),
-                  Text('TOKOTO', style: TextStyle(
-                    fontSize: getProportionateScreenWidth(36),
-                    color: kPrimaryColor,
-                    fontWeight: FontWeight.bold,
-                   ),
-                  ),
-                  const Text("Welcome to Tokoto, Let's Shop"),
-                  const Spacer(),
-                  Image.asset(
-                    'assets/images/splash_1.png',
-                    height: getProportionateScreenHeight(265),
-                    width: getProportionateScreenWidth(235),
-                     )
-                ],
-              )
+              child: SplashContent(),
               ),
-            const Expanded(
+            Expanded(
               flex: 2,
               child: SizedBox(),
               ),
         ],
        ),
     ),
+    );
+  }
+}
+
+class SplashContent extends StatelessWidget {
+  const SplashContent({
+    Key? key,
+  }) : super(key: key);
+  
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children:  <Widget> [
+        const Spacer(flex: 2,),
+        Text('TOKOTO', style: TextStyle(
+          fontSize: getProportionateScreenWidth(36),
+          color: kPrimaryColor,
+          fontWeight: FontWeight.bold,
+         ),
+        ),
+        const Text("Welcome to Tokoto, Let's Shop"),
+        const Spacer(),
+        Image.asset(
+          'assets/images/splash_1.png',
+          height: getProportionateScreenHeight(265),
+          width: getProportionateScreenWidth(235),
+           )
+      ],
     );
   }
 }
